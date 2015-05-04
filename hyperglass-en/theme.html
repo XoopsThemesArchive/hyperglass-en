@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+Design by NodeThirtyThree <http://www.nodethirtythree.com>
+Published by Free CSS Templates <http://www.freecsstemplates.org/>
+Released for free under a Creative Commons Attribution 2.5 License
+
+Title      : HyperGlass
+Version    : 1.0
+Released   : 20070718
+Description: A two-column, fixed-width template featuring a blue glass effect ideal for 1024x768 resolutions.
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="<{$xoops_themecss}>" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="header">
+	<div id="logo">
+		<h1><a href="<{$xoops_url}>"><{$xoops_sitename}></a></h1>
+		<h2><{$xoops_slogan}></h2>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="active"><a href="<{$xoops_url}>" accesskey="1" title="">Home</a></li>
+			<li><a href="#" accesskey="2" title="">News</a></li>
+			<li><a href="#" accesskey="3" title="">Forum</a></li>
+			<li><a href="#" accesskey="4" title="">Contact</a></li>
+		</ul>
+	</div>
+</div>
+<hr />
+<div id="page">
+	<div id="bg">
+		<div id="content">
+			<div class="post" style="padding-top: 57px;">
+				<div class="entry">
+					<{$xoops_contents}>
+
+					<{if $xoops_showcblock == 1}>
+
+					<{foreach item=block from=$xoops_ccblocks}>
+					<h2 class="title"><{$block.title}></h2>
+						<{$block.content}>
+					<{/foreach}>
+
+					<{foreach item=block from=$xoops_clblocks}>
+					<h2 class="title"><{$block.title}></h2>
+						<{$block.content}>
+					<{/foreach}>
+
+					<{foreach item=block from=$xoops_crblocks}>
+					<h2 class="title"><{$block.title}></h2>
+						<{$block.content}>
+					<{/foreach}>
+
+					<{/if}>
+				</div>
+			</div>
+		</div>
+		<!-- end contentn -->
+		<div id="sidebar">
+			<div id="about-box">
+				<h2>About</h2>
+				<p>Please modify this block in theme.html</p>
+			</div>
+			<ul>
+				<li>
+					<{foreach item=block from=$xoops_lblocks}>
+					<h2><{$block.title}></h2>
+					<ul>
+						<li><{$block.content}></li>
+					</ul>
+					<{/foreach}>
+
+					<{foreach item=block from=$xoops_rblocks}>
+					<h2><{$block.title}></h2>
+					<ul>
+						<li><{$block.content}></li>
+					</ul>
+					<{/foreach}>
+
+				</li>
+			</ul>
+		</div>
+		<!-- end sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+</div>
+<!-- end page -->
+<hr />
+<div id="footer">
+	<p>Program: <a href="http://www.xoops.org/">XOOPS</a> | Theme: <a href="http://www.nodethirtythree.com/">NodeThirtyThree</a> adn <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>. Ported by<a href="http://www.insraq.org/">insraq</a>.</p>
+</div>
+</body>
+</html>
